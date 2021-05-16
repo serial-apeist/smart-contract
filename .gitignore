@@ -1,0 +1,12 @@
+abi
+coverage
+coverage.json
+.env
+artifacts
+.vscode
+bin
+build
+cache
+node_modules
+typechain
+package-lock.json

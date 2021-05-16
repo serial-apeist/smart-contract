@@ -1,0 +1,53 @@
+{
+  "name": "smart-contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:serial-apeist/smart-contract.git",
+  "author": "0xMars <firek7731@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "3.4.0-solc-0.7"
+  },
+  "scripts": {
+    "build": "hardhat compile",
+    "compile": "hardhat compile",
+    "coverage": "hardhat coverage --testfiles 'test/*.ts'",
+    "test": "hardhat test",
+    "lint:contracts": "solhint contracts/**/*.sol",
+    "contracts:testnet": "hardhat --network testnet contracts",
+    "contracts:mainnet": "hardhat --network mainnet contracts",
+    "deploy:testnet": "hardhat deploy --network testnet --tags sape",
+    "deploy:mainnet": "LIVE=true hardhat deploy --network mainnet --tags live",
+    "verify:testnet": "hardhat --network kovan etherscan-verify --api-key $ETHERSCAN_API_KEY",
+    "verify:mainnet": "hardhat --network mainnet etherscan-verify --api-key $ETHERSCAN_API_KEY"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@typechain/ethers-v5": "^4.0.0",
+    "@types/chai": "^4.2.16",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.37",
+    "chai": "^4.3.4",
+    "dotenv": "*",
+    "ethereum-waffle": "^3.3.0",
+    "ethereumjs-util": "^7.0.10",
+    "ethers": "^5.1.0",
+    "hardhat": "^2.1.2",
+    "hardhat-abi-exporter": "^2.2.0",
+    "hardhat-deploy": "^0.7.0-beta.58",
+    "hardhat-deploy-ethers": "^0.3.0-beta.7",
+    "hardhat-gas-reporter": "^1.0.4",
+    "hardhat-typechain": "^0.3.5",
+    "mocha": "^8.3.2",
+    "prettier": "^2.2.1",
+    "solc": "0.7.6",
+    "solhint": "^3.3.4",
+    "solidity-coverage": "^0.7.14",
+    "ts-generator": "*",
+    "ts-node": "^9.1.1",
+    "typechain": "^4.0.3",
+    "typescript": "^4.2.3"
+  }
+}
