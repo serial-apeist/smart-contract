@@ -15,6 +15,7 @@ import "hardhat-abi-exporter";
 const INFURA_API_KEY = `${process.env.INFURA_API_KEY}`;
 const MAINNET_PRIVATE_KEY = `${process.env.MAINNET_PRIVATE_KEY}`;
 const CMC_API_KEY = `${process.env.CMC_API_KEY}`;
+const ETHERSCAN_API_KEY = `${process.env.ETHERSCAN_API_KEY}`;
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -39,6 +40,9 @@ const config: HardhatUserConfig = {
     gasPrice: 60,
     coinmarketcap: `${CMC_API_KEY}`
   },
+  etherscan: {
+    apiKey: ETHERSCAN_API_KEY
+  },
   abiExporter: {
     clear: true,
   },
@@ -53,13 +57,11 @@ const config: HardhatUserConfig = {
     testnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
       chainId: 97,
-      gasPrice: 20000000000,
       accounts: [MAINNET_PRIVATE_KEY]
     },
     mainnet: {
       url: "https://bsc-dataseed.binance.org/",
       chainId: 56,
-      gasPrice: 20000000000,
       accounts: [MAINNET_PRIVATE_KEY]
     }
   },
@@ -80,6 +82,9 @@ const config: HardhatUserConfig = {
       default: 0,
       1: '0x2648e99BC8eBf9164cFF4b0432D0522618E65241',
       42: '0x2648e99BC8eBf9164cFF4b0432D0522618E65241'
+    },
+    SAPE: {
+      1: 0x9061250C1E6c405BB6c1FbFEb2D41B84B32207ba
     },
   }
 };

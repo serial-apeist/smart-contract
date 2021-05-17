@@ -18,8 +18,8 @@
     "contracts:mainnet": "hardhat --network mainnet contracts",
     "deploy:testnet": "hardhat deploy --network testnet --tags sape",
     "deploy:mainnet": "LIVE=true hardhat deploy --network mainnet --tags live",
-    "verify:testnet": "hardhat --network kovan etherscan-verify --api-key $ETHERSCAN_API_KEY",
-    "verify:mainnet": "hardhat --network mainnet etherscan-verify --api-key $ETHERSCAN_API_KEY"
+    "verify:testnet": "hardhat --network testnet verify",
+    "verify:mainnet": "hardhat --network mainnet verify"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
